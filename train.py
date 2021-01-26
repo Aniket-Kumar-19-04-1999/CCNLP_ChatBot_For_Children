@@ -12,42 +12,54 @@ from model import NeuralNet
 with open('intents.json',encoding="utf8") as f:
     intents = json.load(f)
 
-all_words = []
-tags = []
-xy = []
-# loop through each sentence in our intents patterns
+all_words = [] # all words stemmed form are stored for creating bag_of_words
+tags = [] # list of all tags in dataset. 
+xy = [] # tuple containing (sentence,tag)
+
+# loop through each sentence in our intents(dataset) patterns(questions)
 for intent in intents['intents']:
     tag = intent['tag']
-    # add to tag list
+    # adding tag to tags list
     tags.append(tag)
+    
     for pattern in intent['patterns']:
-        # tokenize each word in the sentence
+        # tokenize each word in the sentence using nltk_utils tokenize method
         w = tokenize(pattern)
-        # add to our words list
+        # adding tokenized words to our words list
+        # if we do append it would create a 2d list because w is also list
+        # so we extend it
         all_words.extend(w)
-        # add to xy pair
+        # adding tuple of (tokenized_word_array, it's tag) to xy pair
+        # example, xy = [(["hi","good","morning"],"greetings")]
         xy.append((w, tag))
 
-# stem and lower each word
-ignore_words = ['?', '.', '!']
+# stem and lowering of words in all_words
+ignore_words = ['?', '.', '!'] # to ignore from tokenized words
 all_words = [stem(w) for w in all_words if w not in ignore_words]
+
 # remove duplicates and sort
 all_words = sorted(set(all_words))
 tags = sorted(set(tags))
 
-print(len(xy), "patterns")
+print(len(xy), "Total patterns")
 print(len(tags), "tags:", tags)
-print(len(all_words), "unique stemmed words:", all_words)
+print(len(all_words), "All unique stemmed words:", all_words)
 
 # create training data
-X_train = []
+X_train = [] # 2d array
 y_train = []
 for (pattern_sentence, tag) in xy:
     # X: bag of words for each pattern_sentence
+    # pattern_sentence is tokenized words and all_words are stemmed and tokenized
+    # pattern_sentence is stemmed in bag_of_words function
+    # returns array of length = size of all_words with 1 and 0's
     bag = bag_of_words(pattern_sentence, all_words)
-    X_train.append(bag)
-    # y: PyTorch CrossEntropyLoss needs only class labels, not one-hot
-    label = tags.index(tag)
+    X_train.append(bag) 
+    # y: needs only class labels
+    label = tags.index(tag) # index of current tag in tags list
+    # label is the index of current tag in tags array.
+    # like tags = ["greeting","service","goodbye"] and current tag is "goodbye"
+    # then label has value 2 and is appended in y_train
     y_train.append(label)
 
 X_train = np.array(X_train)
@@ -57,10 +69,10 @@ y_train = np.array(y_train)
 num_epochs = 1000
 batch_size = 8
 learning_rate = 0.001
-input_size = len(X_train[0])
+input_size = len(X_train[0]) # len is constant as we are using bag_of_words size
 hidden_size = 8
-output_size = len(tags)
-print(input_size, output_size)
+output_size = len(tags) # number of output classes
+print("input size = {}, hidden size = {}, output size={}".format(input_size, hidden_size, output_size))
 
 class ChatDataset(Dataset):
 
@@ -83,6 +95,7 @@ train_loader = DataLoader(dataset=dataset,
                           shuffle=True,
                           num_workers=0)
 
+# set device as gpu if available else cpu
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 model = NeuralNet(input_size, hidden_size, output_size).to(device)
@@ -99,8 +112,7 @@ for epoch in range(num_epochs):
         
         # Forward pass
         outputs = model(words)
-        # if y would be one-hot, we must apply
-        # labels = torch.max(labels, 1)[1]
+        
         loss = criterion(outputs, labels)
         
         # Backward and optimize
@@ -109,10 +121,8 @@ for epoch in range(num_epochs):
         optimizer.step()
         
     if (epoch+1) % 100 == 0:
-        print (f'Epoch [{epoch+1}/{num_epochs}], Loss: {loss.item():.4f}')
+        print (f'Epoch [{epoch+1}/{num_epochs}]')
 
-
-print(f'final loss: {loss.item():.4f}')
 
 data = {
 "model_state": model.state_dict(),
@@ -123,7 +133,8 @@ data = {
 "tags": tags
 }
 
+# saving for later use 
 FILE = "data.pth"
 torch.save(data, FILE)
 
-print(f'training complete. file saved to {FILE}')
+print(f'Training complete. File saved as {FILE}')
