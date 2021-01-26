@@ -3,16 +3,15 @@ import json
 import os
 import torch
 import tkinter
+import pyttsx3
 
 from tkinter import *
 from model import NeuralNet
 from nltk_utils import bag_of_words, tokenize
 
-
+engine = pyttsx3.init()
    
-   
-   
-
+# set device to gpu if available else cpu
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 with open('intents.json',encoding="utf8") as json_data:
@@ -33,31 +32,44 @@ model.load_state_dict(model_state)
 model.eval()
 
 def clear():
+    '''
+    clears the command prompt screen
+    '''
     os.system( 'cls' )
 	
 def chatbot_response(sentence):
-	
+	'''
+    Takes input as a raw string sentences and returns output from model
+    '''
+    # terminating condition
     if (sentence=="quit"):
         return ("Thank You")
 
+    # tokenize sentence provided by user
     sentence = tokenize(sentence)
-    X = bag_of_words(sentence, all_words)
-    X = X.reshape(1, X.shape[0])
+    # create a bag of words vector, it internally stemms the sentence
+    # and compares words to all_words corpus and creates the vector.
+    X = bag_of_words(sentence, all_words) # 1-d array
+    X = X.reshape(1, X.shape[0]) # convert to 2-d array 
     X = torch.from_numpy(X).to(device)
 
     output = model(X)
     _, predicted = torch.max(output, dim=1)
-
+    # get tag of max output value
     tag = tags[predicted.item()]
-
+    # check probability of that tag using softmax activation
     probs = torch.softmax(output, dim=1)
     prob = probs[0][predicted.item()]
+    # if that tags probability is greater than 75%
+    # return response by randomly selecting response from that tag
     if prob.item() > 0.75:
         for intent in intents['intents']:
             if tag == intent["tag"]:
                 return(random.choice(intent['responses']))
+    # if probability is less than 75% then some undefined question 
+    # is provided
     else:
-        return ("I do not understand...")
+        return ("I did not understand the question asked")
         
  
 def send():
@@ -70,6 +82,8 @@ def send():
         ChatLog.config(foreground="#442265", font=("Verdana", 12 ))
 
         res = chatbot_response(msg)
+        engine.say(res)
+        engine.runAndWait()
         ChatLog.insert(END,"Shinchan: " + res + '\n\n')
 
         ChatLog.config(state=DISABLED)
