@@ -81,22 +81,17 @@ def send():
         ChatLog.insert(END, "You: " +  msg + '\n\n')
         ChatLog.config(foreground="#442265", font=("Verdana", 12 ))
         
-        n = os.fork()
-        if n>0:
-            # parent process = print in gui
-            res = chatbot_response(msg)
         
-            ChatLog.insert(END,"Shinchan: " + res + '\n\n')
+        res = chatbot_response(msg)        
+        ChatLog.insert(END,"Shinchan: " + res + '\n\n')
+        
+        engine.say(res)
+        engine.runAndWait()
 
-            ChatLog.config(state=DISABLED)
-            ChatLog.yview(END)
-            if(res=="Thank You"):
-                base.destroy()
-                
-        else:
-            # child process = output audio
-            engine.say(res)
-            engine.runAndWait()
+        ChatLog.config(state=DISABLED)
+        ChatLog.yview(END)
+        if(res=="Thank You"):
+            base.destroy()
         
     
 clear() 
