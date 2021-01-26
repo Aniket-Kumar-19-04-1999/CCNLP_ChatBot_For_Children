@@ -1,0 +1,203 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day"
+      ],
+      "responses": [
+        "Hey :-)",
+        "Hello, thanks for visiting",
+        "Hi there, what can I do for you?",
+        "Hi there, how can I help?"
+      ]
+    },
+
+
+
+
+
+
+
+        {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye"],
+      "responses": [
+        "See you later, thanks for visiting",
+        "Have a nice day",
+        "Bye! Come back again soon."
+      ]
+    },
+
+
+
+        {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+    },
+
+
+
+
+
+    {
+      "tag": "services",
+      "patterns": [
+        "Which services do you have?",
+        "What kind of games you can help me with ?",
+        "What games do you have?",
+        "what can i ask you?"
+      
+      ],
+      "responses": [
+        "We can help you with football, cricket, basketball, ludo, carrom, chess, badminton, tennis"
+      ]
+    },
+
+
+    {
+      "tag": "funny",
+      "patterns": [
+        "Tell me a joke!",
+        "Tell me something funny!",
+        "Do you know a joke?"
+      ],
+      "responses": [
+        "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
+        "What did the buffalo say when his son left for college? Bison."
+      ]
+    },
+
+
+
+
+    {
+      "tag": "football",
+      "patterns": [
+		  "can you help me with football",
+		  "explain about football",
+		  "what is football",
+		  "what are rules of football",
+		  "how to play football"
+      ],
+      "responses": [
+        "Sports commonly called football include association football (known as soccer in some countries). There are a number of references to traditional, ancient, or prehistoric ball games played in many different parts of the world.\nThe basic concept is\nTo defend our goal and attack on opponents goal post\nUse a ball for attack\nPlayers can only use their feet",
+		"Sports commonly called soccer is also referred as football. Each country has their own naming conventions. There are references to ancient existence.\nCommon rules among the sports include\nTwo teams of usually between 11 and 18 players; some variations that have fewer players (five or more per team) are also popular.\nA clearly defined area in which to play the game.\nScoring goals or points by moving the ball to an opposing team's end of the field and either into a goal area, or over a line. Goals or points resulting from players putting the ball between two goalposts.\nThe goal or line being defended by the opposing team. Players using only their body to move the ball."
+      ]
+    },
+
+
+    {
+      "tag": "cricket",
+      "patterns": [
+      "can you help me with cricket",
+      "explain about cricket",
+      "what is cricket",
+      "what are rules of cricket",
+      "how to play cricket"
+      ],
+      "responses": [
+        "Cricket is a bat-and-ball game played between two teams of eleven players on a field at the centre of which is a 22-yard (20-metre) pitch with a wicket at each end, each comprising two bails balanced on three stumps. It has various forms such as Twenty20(20 overs i.e. 120 balls), odi (50 overs i.e. 300 balls) and test cricket (unlimited overs). Battiing side scores runs, and balling side defends it. It has various earlier refences.\nBasic rules are :\nCricket is played between two teams each made up of eleven players. (Sometime in junior competitions you will find 8 player teams).\nGames comprise of at least one innings where each team will take turns in batting and fielding/bowling.\nThe fielding team will have a bowler bowl the ball to the batsman who tries to hit the ball with their bat.\nThe fielding team tries to get the batsmen out by…\nHitting the wickets with the ball when bowling\nCatching a batsman’s shot on the full\nHitting the batsman’s leg in front of the wicket (LBW)\nOr hitting the wickets before the batsmen can run to the other end of the pitch\nThe batmen try to score as many runs as possible before getting out by…\nHitting the ball and running between the wickets and making it to the other end before the fielders can hit the wickets with the ball. Each time you run one full length of the pitch it equals 1 run.\nHitting the ball to the boundary along the ground is 4 runs.\nHitting the ball over the boundary on the full equals 6 runs.\nThe fielding team must get 10 batsmen out before they can change over and start batting.\nThe aim of the game is to score as many runs as possible before the fielding team takes 10 wickets. The team with the most runs wins.",
+		"Forms of cricket range from Twenty20, with each team batting for a single innings of 20 overs, to Test matches played over five days. Traditionally cricketers play in all-white kit, but in limited overs cricket they wear club or team colours. In addition to the basic kit, some players wear protective gear to prevent injury caused by the ball, which is a hard, solid spheroid made of compressed leather with a slightly raised sewn seam enclosing a cork core layered with tightly wound string. This game has various earlier references.\nSome basic rules are :\nCricket is played between two teams each made up of eleven players. (Sometime in junior competitions you will find 8 player teams).\nGames comprise of at least one innings where each team will take turns in batting and fielding/bowling.\nThe fielding team will have a bowler bowl the ball to the batsman who tries to hit the ball with their bat.\nThe fielding team tries to get the batsmen out by…\nHitting the wickets with the ball when bowling\nCatching a batsman’s shot on the full\nHitting the batsman’s leg in front of the wicket (LBW)\nOr hitting the wickets before the batsmen can run to the other end of the pitch\nThe batmen try to score as many runs as possible before getting out by…\nHitting the ball and running between the wickets and making it to the other end before the fielders can hit the wickets with the ball. Each time you run one full length of the pitch it equals 1 run.\nHitting the ball to the boundary along the ground is 4 runs.\nHitting the ball over the boundary on the full equals 6 runs.\nThe fielding team must get 10 batsmen out before they can change over and start batting.\nThe aim of the game is to score as many runs as possible before the fielding team takes 10 wickets. The team with the most runs wins."
+      ]
+    },
+
+
+
+    {
+      "tag": "basketball",
+      "patterns": [
+      "can you help me with basketball",
+      "explain about basketball",
+      "what is basketball",
+      "what are rules of basketball",
+      "how to play basketball"
+      ],
+      "responses": [
+        "Basketball, colloquially referred to as hoops, is a team sport in which two teams, most commonly of five players each, opposing one another on a rectangular court, compete with the primary objective of shooting a basketball (approximately 9.4 inches (24 cm)in diameter) through the defender's hoop (a basket 18 inches (46 cm) in diameter mounted 10 feet (3.048 m) high to a backboard at each end of the court) while preventing the opposing team from shooting through their own hoop.\n1) Although the foul rule is described above as a defensive rule, it applies exactly the same to all players on the court including offensive players.\n2) Basketball players cannot kick the ball or hit it with their fist.\n3) No player can touch the basketball while it is traveling downward towards the basket or if it is on the rim. This is called goaltending. (touching the ball on the rim is legal in some games).\nEvery player on the court is subject to the same rules regardless of the position they play. The positions in basketball are just for team basketball strategy and there are no positions in the rules.",
+        "Basketball, it is based on hopping of players. It has two teams with objective to score basket. It consists of may rules some of the major are listed below. The basketball team on offense is the team with the basketball. When a player has the basketball there are certain rules they must follow: \n1) The player must bounce, or dribble, the ball with one hand while moving both feet. n2) The basketball player can only take one turn at dribbling. \n3) The ball must stay in bounds. If the offensive team looses the ball out of bounds the other team gets control of the basketball.\n4) The players hand must be on top of the ball while dribbling\n5) Once the offensive team crosses half court, they may not go back into the backcourt. n6) The main rule for the defensive player is not to foul. There is some interpretation that has to be made by the referee, but, in general, the defensive player may not touch the offensive player in a way that causes the offensive player to lose the ball or miss a shot."
+      ]
+    },
+
+
+    {
+      "tag": "ludo",
+      "patterns": [
+      "can you help me with ludo",
+      "explain about ludo",
+      "what is ludo",
+      "what are rules of ludo",
+      "how to play ludo"
+      ],
+      "responses": [
+        "Ludo (from Latin ludo 'I play') is a strategy board game for two to fourplayers, in which the players race their four tokens from start to finish according to the rolls of a single die. Like other cross and circle games, Ludo is derived from the Indian game Pachisi, but simpler. The game and its variations are popular in many countries and under various names. Pachisi was created in India in the 6th century. The earliest evidence of this game's evolution in India is the depiction of boards on the caves of Ellora. The original version is also described in Indian epic Mahabharata in which Shakuni uses the cursed dice to beat the Pandavas and at last after losing everything, Yudhisthira puts his wife Draupadi on stake and loses her too. The contemporary version was played by the Mughal emperors of India; a notable example is Akbar.\nRules are:\nPlayers take turns in a clockwise order; highest throw of the die starts.\nEach throw, the player decides which piece to move. A piece simply moves in a clockwise direction around the track given by the number thrown. If no piece can legally move according to the number thrown, play passes to the next player.\nA throw of 6 gives another turn.\nA player must throw a 6 to move a piece from the starting circle onto the first square on the track. The piece moves 6 squares around the circuit beginning with the appropriately coloured start square (and the player then has another turn).\nIf a piece lands on a piece of a different colour, the piece jumped upon is returned to its starting circle.\nIf a piece lands upon a piece of the same colour, this forms a block. This block cannot be passed or landed on by any opposing piece."
+      ]
+    },
+
+
+    {
+      "tag": "carrom",
+      "patterns": [
+      "can you help me with carom",
+      "explain about carom",
+      "what is carom",
+      "what are rules of carom",
+      "how to play carom"
+      ],
+      "responses": [
+        "Carrom (also spelled carom/carroms) is a tabletop game of Indian origin. The game is very popular in South Asia and the Middle East, and is known by various names in different languages. In South Asia, many clubs and cafés hold regular tournaments. Carrom is very commonly played by families, including children, and at social functions. Carrom is not a patented game. It is in the public domain. Different standards and rules exist in different areas. It became very popular in United Kingdom and the Commonwealth realms during the early 20th century.\nIt consists of carrom men, queen. Usually powder is sprinkled for smooth experience.\nSome of rules for playing carrom are :\nStriking\nFor each strike, the player must position the striker within the baseline OR on one of the two circles at either end of the baseline.\nA striker within the baseline must touch both the front line and the rear line.\nThe striker may not 'cut the moon' - be placed partially within the baseline and partially within the circle.\nThe player must flick the striker with one finger so that it crosses the front baseline - it is not permitted to flick backwards or horizontally. nA piece that is on or behind the front baseline must not be struck by the striker until the striker has crossed the front baseline.\nIn striking, the player's hand or arm must not cross the diagonal foul lines at either end of the baseline.\nBasic rules\nFor the very first turn, the player is allowed three attempts to 'break' i.e. disturb the central group of counters.\nIt doesn't matter which piece the striker hits first and it doesn't matter if the striker hits no pieces.\nIf a the striker pockets the Queen and/or one or more pieces of her own colour, the player retrieves the striker and takes another strike.\nIf the player pockets no pieces or commits a foul, the turn finishes.\nCovering the Queen\nA player may only pocket and cover the Queen if that player has already pocketed at least one piece of that player's colour.\nShould a player pocket the Queen before being permitted to cover it, the turn continues but the Queen is returned to the centre at the end of the turn.\nIf a player pockets the Queen and one of her own pieces in the same turn, this counts and that player has covered the Queen. Such a player must have already pocketed at least one piece in order to cover the Queen as per normal.\nWhen a player pockets the Queen but does not cover it, the Queen is returned as near as possible to the centre circle by the opponent."
+      ]
+    },
+
+
+    {
+      "tag": "chess",
+      "patterns": [      
+      "can you help me with chess",
+      "explain about chess",
+      "what is chess",
+      "what are rules of chess",
+      "how to play chess"
+      ],
+      "responses": [
+        "Chess is a recreational and competitive board game played between two players. Sometimes called Western or international chess to distinguish it from its predecessors and related games such as xiangqi, the current form of the game emerged in Southern Europe during the second half of the 15th century after evolving from similar, much older games of Indian and Persian origin. Today, chess is one of the world's most popular games, played by millions of people worldwide at home, in clubs, online, by correspondence, and in tournaments.\nWhite is always first to move and players take turns alternately moving one piece at a time. Movement is required. When a king is threatened with capture (but can protect himself or escape), it´s called check. If a king is in check, then the player must make a move that eliminates the threat of capture and cannot leave the king in check. Checkmate happens when a king is placed in check and there is no legal move to escape. Checkmate ends the game and the side whose king was checkmated looses. nChess moves\nKing can move exactly one square horizontally, vertically, or diagonally. At most once in every game, each king is allowed to make a special move, known as castling.\nQueen can move any number of vacant squares diagonally, horizontally, or vertically.\nRook can move any number of vacant squares vertically or horizontally. It also is moved while castling.\nBishop can move any number of vacant squares in any diagonal direction.\nKnight can move one square along any rank or file and then at an angle. The knight´s movement can also be viewed as an “L” or “7″ laid out at any horizontal or vertical angle.\nPawns can move forward one square, if that square is unoccupied. If it has not yet moved, the pawn has the option of moving two squares forward provided both squares in front of the pawn are unoccupied. A pawn cannot move backward. Pawns are the only pieces that capture differently from how they move. They can capture an enemy piece on either of the two spaces adjacent to the space in front of them (i.e., the two squares diagonally in front of them) but cannot move to these spaces if they are vacant. The pawn is also involved in the two special moves en passant and promotion."
+
+      ]
+    },
+
+
+    {
+      "tag": "badminton",
+      "patterns": [
+      "can you help me with badminton",
+      "explain about badminton",
+      "what is badminton",
+      "what are rules of badminton",
+      "how to play badminton"
+      ],
+      "responses": [
+        "Badminton is a racquet sport played using racquets to hit a shuttlecock across a net. Although it may be played with larger teams, the most common forms of the game are 'singles' (with one player per side) and 'doubles' (with two players per side). Badminton is often played as a casual outdoor activity in a yard or on a beach; formal games are played on a rectangular indoor court. Points are scored by striking the shuttlecock with the racquet and landing it within the opposing side's half of the court. The game may have originally developed among expatriate officers in British India, where it was very popular by the 1870s. Ball badminton, a form of the game played with a wool ball instead of a shuttlecock, was being played in Thanjavur as early as the 1850s and was at first played interchangeably with badminton by the British, the woollen ball being preferred in windy or wet weather. Early on, the game was also known as Poona or Poonah after the garrison town of Poona, where it was particularly popular and where the first rules for the game were drawn up in 1873.\nSome basic rules are:\nA player must wait until his opponent is ready before serving. If the opponent attempts a return then he is ruled having been ready.nThe feet of both players must remain in a stationary position until the serve is made. Your feet can not be touching the line at this time.\nIt is not a fault if you miss the shuttle while serving.\nThe shuttle cannot be caught and slung with the racket.\nA player cannot hold his racket near the net to ward off a downward stroke by his opponent or to interfere with his racket.\nScoring System\nA match consists of the best of 3 games of 21 points.\nEvery time there is a serve – there is a point scored.\nThe side winning a rally adds a point to its score.\nAt 20 all, the side which gains a 2 point lead first, wins that game.\nAt 29 all, the side scoring the 30th point, wins that game.\nThe side winning a game serves first in the next game."
+      ]
+    },
+
+    {
+      "tag": "tennis",
+      "patterns": [
+      "can you help me with tennis",
+      "explain about tennis",
+      "what is tennis",
+      "what are rules of tennis",
+      "how to play tennis"
+      ],
+      "responses": [
+        "Tennis is a racket sport that can be played individually against a single opponent (singles) or between two teams of two players each (doubles). Each player uses a tennis racket that is strung with cord to strike a hollow rubber ball covered with felt over or around a net and into the opponent's court. The object of the game is to maneuver the ball in such a way that the opponent is not able to play a valid return. The player who is unable to return the ball will not gain a point, while the opposite player will. The four Grand Slam tournaments (also referred to as the Majors) are especially popular: the Australian Open played on hard courts, the French Open played on red clay courts, Wimbledon played on grass courts, and the US Open also played on hard courts. Historians believe that the game's ancient origin lay in 12th century northern France, where a ball was struck with the palm of the hand. Louis X of France was a keen player of jeu de paume ('game of the palm'), which evolved into real tennis, and became notable as the first person to construct indoor tennis courts in the modern style. nSome rules of tennis are:\nThe game starts with a coin toss to determine which player must serve first and which side they want to serve from.\nThe server must then serve each point from alternative sides on the base line. At no point must the server’s feet move in front of the baseline on the court prior to hitting their serve.\nIf the server fails to get their first serve in they may take advantage of a second serve. If they again fail to get their second serve in then a double fault will be called and the point lost.\nThe receiver may stand where they wish upon receipt of the serve. If the ball is struck without the serve bouncing then the server will receive the point.\nOnce a serve has been made the amount of shots between the players can be unlimited. The point is won by hitting the ball so the opponent fails to return it in the scoring areas.\nPoints are awarded in scores of 15, 30 and 40. 15 represent 1 point, 30 = 2 and 40 = 3. You\nneed 4 points to win a game. If a game lands on 40-40 it’s known as deuce. From deuce a player needs to win 2 consecutive points to win the game. After winning one point from deuce they player is on advantage. If the player wins the next point they win the game, if they lose it goes back to deuce.\nTo win the set a player must win 6 games by 2 or more. The opening sets will go to a tie break if its ends up 6-6 where players play first to 7 points. The final set will not have a tie break and requires players to win by two games with no limits.\nIf a player touches the net, distracts his opponent or impedes in anyway then they automatically lose the point.\nThe ball can hit any part of the line for the point to be called in, outside the line and the ball is out.\nThe balls in a tennis match are changed for new balls every 6 games"
+      ]
+    }
+  ]
+}
